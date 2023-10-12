@@ -8,6 +8,6 @@ export const ServerFather = async () => {
     // const subject = prisma.subjects.findUnique({});
 
     return <div>
-        {client ? client : "Idk who am I"} <br/> <ClientLeaf/> <br/> <ServerLeaf/>
+        [{client ? client : "Idk who am I"} <br/> <ClientLeaf/> <br/> <ServerLeaf/>]
     </div>
 }
