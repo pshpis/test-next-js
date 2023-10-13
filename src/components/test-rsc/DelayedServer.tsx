@@ -1,12 +1,11 @@
-function delay(ms: number) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+import {wait} from "@/utils/wait";
 
 type NotNeededProps = {
     content?: string
 }
 export const DelayedServer = async (props: NotNeededProps) => {
-    await delay(5000);
+    // uncomment to see magic
+    // await wait(5000);
     return <>
         [
         I dont know how I will be rendered. <br/>
