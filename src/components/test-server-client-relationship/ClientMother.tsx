@@ -15,7 +15,7 @@ export const ClientMother = ({ServerLeaf} : any) => {
     return <div>
         [
         {client} <br/> <ClientLeaf/> <br/>
-        {ServerLeaf}
+        {ServerLeaf ? ServerLeaf : ""}
         ]
     </div>
 }
