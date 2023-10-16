@@ -44,9 +44,18 @@ const fatherServer, motherServer = ...;
    What if 2 <AuthGuards>
    What if 2 <AuthGuards> in Suspense
 4) Suspense renders HTML immediately but ships JSON later via webpack in pure react + webpack no next.js
-   https://github.com/lydiahallie/minimal-rsc/tree/master
-   https://codesandbox.io/s/kind-sammet-j56ro?file=/src/App.js:231-899
+   
 5) Запихнуть гварды внутрь друг-друга
+
+6) Reimplement Suspense + RSC in plain react + express + webpack without next.js
+and observe if anything is different in particular:
+   * verify that server component source code is not included in client bundle
+   * that suspence with server components works the same (long polling + JS and hidden <div />)
+   * Verify that react client components also work and are fine without next.js
+   * What is the difference in the 2 repos below!
+     * https://github.com/lydiahallie/minimal-rsc/tree/master
+     * https://codesandbox.io/s/kind-sammet-j56ro?file=/src/App.js:231-899
+   - How we can use react-helmet in the same way next/redirect was used and for Title, maybe <https://react.dev/reference/react-dom/server/renderToPipeableStream#waiting-for-all-content-to-load-for-crawlers-and-static-generation> and fix onShellReady by hands
 
 ### Ответы
 1) - revalidatePath позволяет очищать кэшированные данные по требованию для определенного пути. 
